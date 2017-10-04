@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body{
+                background-color: aliceblue;
+            }
+            h1{
+                color:blue;
+            }
+            .embedded{
+                font-size: 20px;
+                color: red;
+            }
+            #div1{
+                font-size: 20px;
+                color: green;
+            }
+        </style>
+        <link href="css1.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+           @import url("css2.css");
+        </style>
+    </head>
+    <body>
+        <h1>Metode penggunaan CSS</h1>
+        <div id="div1">Menggunakan ID</div>
+        <div style="background-color: aqua">Inline Style</div>
+        <div class="embedded">Embedded</div>
+        <div class="wrapper">External</div>
+        <div class="content">Import</div>
+    </body>
+</html>

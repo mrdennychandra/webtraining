@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manipulasi Konten</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <style type="text/css">
+            .blue{
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+                $("#div1").addClass("blue");
+                $("#search").keyup(function () {
+                    $("#div2").html($("#search").val());
+                    $("#div3").text($("#search").val());
+                });
+                 $("#div1").click(function(){
+                     $(this).hide(1000);
+                 });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1">Klik div1 ini</div>
+        <br>
+        <input type="text" id="search" placeholder="ketikkan sesuatu">
+        <div id="div2">div2</div>
+        <div id="div3">div3</div>
+    </body>
+</html>

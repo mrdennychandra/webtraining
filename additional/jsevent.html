@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function klik1() {
+                document.getElementById("div1").innerHTML = "klik 1 kali";
+            }
+            function mouseDiatas() {
+                document.getElementById("div2").innerHTML = "mouse diatas";
+            }
+            function mouseOut(){
+                 document.getElementById("div2").innerHTML = "";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="klik1()">Panggil fungsi klik1()</button>
+        <div id="div1"></div>
+        <button onmouseover="mouseDiatas()" onmouseout="mouseOut()">Panggil fungsi mouseDiatas()</button>
+        <div id="div2"></div>
+    </body>
+</html>

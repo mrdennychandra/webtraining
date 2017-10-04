@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function getPerson(){
+               var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+                var obj = JSON.parse(text);
+document.getElementById("div1").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="getPerson()">fetch person.json</button>
+        <div id="div1"></div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Form Master Detail</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script>
+            var idx = 0;
+            function hapus(idx) {
+                $("#tr_" + idx).remove();
+            }
+
+            function add_content(idx) {
+                var content = '<tr id="tr_' + idx + '">';
+                content += '<td>';
+                content += '<input type="text" name="barang[]" id="barang[' + idx + ']" placeholder="nama barang">';
+                content += '</td>';
+                content += '<td>';
+                content += '<input type="text" name="jumlah[]" id="jumlah[' + idx + ']" placeholder="jumlah">';
+                content += '</td>';
+                content += '<td>';
+                content += '<input type="text" name="satuan[]" id="satuan[' + idx + ']" placeholder="satuan">';
+                content += '</td>';
+                content += '<td>';
+                content += '<input type="text" name="total[]" id="total[' + idx + ']">';
+                content += '</td>';
+                content += '<td>';
+                content += '<a href="#" onclick=\'hapus(' + idx + ')\'">hapus</a>';
+                content += '</td>';
+                content += '</tr>';
+                $("#tabel").append(content);
+            }
+
+            $(function () {
+                add_content();
+                idx++;
+                $("#btnadd").click(function () {
+                    add_content();
+                     idx++;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <form 
+                name="formbeli" 
+                method="post" 
+                id="formbeli" 
+                action="masterdetailform.php">
+                <div>
+                    <label for="faktur">Nomor Faktur:</label>
+                    <input type="text" name="faktur" id="faktur"
+                           size="30" required="required">
+                </div>
+                <div>
+                    <label for="petugas">Petugas:</label>
+                    <input type="text" name="petugas" id="petugas"
+                           size="30" required="required">
+                </div>
+                <div>
+                    <input type="button" value="+" id="btnadd">
+                </div>
+                <table id="tabel">
+                    <tr>
+                        <th>Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga Satuan</th>
+                        <th>Total</th>
+                        <th>Aksi</th>
+                    </tr>
+                </table>
+                <div class="button">
+                    <input type="submit" value="Bayar" id="submit" name="submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

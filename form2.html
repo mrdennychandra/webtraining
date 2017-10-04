@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Pendaftaran</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="form.css">
+    </head>
+    <body>
+        <h2>Form Pendaftaran Pelatihan Pemrograman Web</h2>
+        <form 
+            name="formdaftar" 
+            method="post" 
+            id="formdaftar" 
+            action="server.php">
+            <div>
+                <label for="nama">Nama:</label>
+                <input type="text" name="nama" id="nama"
+                       size="30" required="required">
+            </div>
+            <div>
+                <label for="telpon">Telpon:</label> 
+                <input type="text" name="telpon" id="telpon" required="required">
+            </div>
+
+            <div>
+                <label for="email">Email : </label>  
+                <input type="text" name="email" id="email" maxlength="30"
+                       size="30" required="required">
+            </div>
+
+            <div>
+                <label for="alamat">Alamat : </label> 
+                <textarea name="alamat" id="alamat" rows="4" cols="30"></textarea>
+            </div>
+
+            <fieldset>
+                <legend>Jenis Kelamin</legend>
+                <ul>
+                    <li>
+                        <label for="laki">
+                            <input type="radio" name="jnskelamin" id="laki" value="L"> Laki-laki
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                           <input type="radio" name="jnskelamin" id="perempuan" value="P"> Perempuan
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+
+            <div>
+                <label for="foto">Foto : </label> 
+                <input type="file" name="foto" id="foto"><br>
+            </div>
+
+            <div>
+                <label for="php">Bahasa Pemrograman/Scripting: </label><br>
+                <input type="checkbox" name="php" id="php" value="php">
+                PHP<br>
+                <input type="checkbox" name="java" id="java"
+                       value="java"> Java<br>
+                <input type="checkbox" name="html" id="html"
+                       value="html"> HTML<br>
+            </div>
+
+            <div>
+                <label for="pengalaman">Pengalaman bekerja: </label><br>
+                <select size="1" name="pengalaman" id="pengalaman">
+                    <option value="1">Sudah pernah bekerja</option>
+                    <option value="2">Sedang bekerja</option>
+                    <option value="3">Belum bekerja</option>
+                </select>
+            </div>
+            <div class="button">
+                <input type="submit" value="Daftar" id="submit" name="submit">
+            </div>
+        </form>
+    </body>
+</html>

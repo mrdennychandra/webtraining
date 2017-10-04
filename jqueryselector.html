@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("span").mouseover(function(){
+                    $(this).css("color","green");
+                });
+                $("#div1").click(function(){
+                    $(this).css("color","blue");
+                });
+                $(".divclass").dblclick(function(){
+                    $(this).css("color","red");
+                });
+                $("*").keypress(function(){
+                    $(this).css("font-weight","bold");
+                });
+                $("p,h1").click(function(){
+                    alert("tag p dan h1 di klik");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div><span>Selector Tag</span></div>
+        <div id="div1">Selector ID</div>
+        <div class="divclass">Selector Class</div>
+        <div>Selector Universal (tekan keyboard)</div>
+        <p>
+           Selector Universal
+        </p>
+        <h1>Selector Universal</h1>
+    </body>
+</html>

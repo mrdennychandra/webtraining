@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("#btnajax").click(function(){
+                    $("#div1").load("result.html");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <button id="btnajax">Get result.html</button>
+    </body>
+</html>

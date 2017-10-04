@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scope Variabel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            var judul = "Judul Ini scopenya global";
+            function varLocal(){
+                var konten = "variabel konten sifatnya lokal,hanya di fungsi ini";
+            }
+            function testVar(){
+                document.getElementById("div1").innerHTML = judul;
+                /*
+                 * Uncaught ReferenceError: konten is not defined
+                   at testVar (jsscopevariable.html:14)
+                   at HTMLButtonElement.onclick (jsscopevariable.html:19)
+                 */
+                document.getElementById("div2").innerHTML = konten;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="testVar()">Panggil fungsi testVar()</button>
+        <div id="div1">variabel global</div>
+        <div id="div2">variabel lokal</div>
+    </body>
+</html>
